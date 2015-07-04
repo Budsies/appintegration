@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ImageCell.h
 //  BudsiesDemoApp
 //
 //  Created by Paul D on 28.06.15.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ImageCell : UICollectionViewCell
 
+@property (strong, nonatomic) UIImage *image;
 
 @end
-

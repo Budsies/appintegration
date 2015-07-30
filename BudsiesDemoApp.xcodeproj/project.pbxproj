@@ -505,7 +505,7 @@
 				INFOPLIST_FILE = BudsiesDemoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4761c7d0-1ff9-4887-a4ef-62589720a7e6";
+				PROVISIONING_PROFILE = "e47a5396-119a-4e9c-ac58-03b06aba0555";
 			};
 			name = Debug;
 		};
@@ -523,7 +523,7 @@
 				INFOPLIST_FILE = BudsiesDemoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "d587f074-0477-4e31-9af9-fd89d7c82bd0";
+				PROVISIONING_PROFILE = "2ccac81a-a6ee-48a4-9043-609589986397";
 			};
 			name = Release;
 		};

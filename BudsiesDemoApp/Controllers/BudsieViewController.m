@@ -26,10 +26,10 @@
 
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back To The App" style:UIBarButtonItemStyleBordered target:self action:@selector(backTap)];
 
-    self.hostName = @"budsies.com";
+    self.hostName = @"www.budsies.com";
     NSString *referalID = @"referalID";
 
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://%@/budsies/integration/index?acc=%@", self.hostName, referalID]]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://%@/budsie/integration/index?acc=%@", self.hostName, referalID]]];
 
     [self.webView loadRequest:request];
 
@@ -60,6 +60,10 @@
 #pragma mark - UIWebViewDelegate
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+    if (![request.URL.host isEqualToString:self.hostName] || [request valueForHTTPHeaderField:@"App-ID"]) {
+        return YES;
+    }
+
     NSString *method = request.URL.fragment;
 
     // handle events represented via URL
@@ -95,10 +99,6 @@
         [self.navigationController popViewControllerAnimated:YES];
 
         return NO;
-    }
-
-    if (![request.URL.host isEqualToString:self.hostName] || [request valueForHTTPHeaderField:@"App-ID"]) {
-        return YES;
     }
 
     [webView loadRequest:[self modifyRequest:request]];

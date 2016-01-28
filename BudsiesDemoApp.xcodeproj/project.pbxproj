@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18057E441C5A43B800E8BB00 /* NSHTTPCookieStorage+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = 18057E431C5A43B800E8BB00 /* NSHTTPCookieStorage+Additional.m */; };
 		1831F8391B408246000937C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1831F8381B408246000937C6 /* main.m */; };
 		1831F83C1B408246000937C6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1831F83B1B408246000937C6 /* AppDelegate.m */; };
 		1831F8421B408246000937C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1831F8401B408246000937C6 /* Main.storyboard */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18057E421C5A43B800E8BB00 /* NSHTTPCookieStorage+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSHTTPCookieStorage+Additional.h"; sourceTree = "<group>"; };
+		18057E431C5A43B800E8BB00 /* NSHTTPCookieStorage+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSHTTPCookieStorage+Additional.m"; sourceTree = "<group>"; };
 		1831F8331B408246000937C6 /* BudsiesDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BudsiesDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1831F8371B408246000937C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1831F8381B408246000937C6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -126,6 +129,7 @@
 				C87BFF4DFBF33682F5E426D3 /* Views */,
 				C87BFC9242DE5BD7DEFF8DA3 /* Controllers */,
 				C87BFE5643C8B2DA270ACE1E /* Models */,
+				C87BF2EEA13CB1FCE25F5BA7 /* Categories */,
 			);
 			path = BudsiesDemoApp;
 			sourceTree = "<group>";
@@ -164,6 +168,15 @@
 				FB90946393999EFF06E6CE9B /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		C87BF2EEA13CB1FCE25F5BA7 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				18057E421C5A43B800E8BB00 /* NSHTTPCookieStorage+Additional.h */,
+				18057E431C5A43B800E8BB00 /* NSHTTPCookieStorage+Additional.m */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 		C87BF34283EB4194B2FF6AB7 /* Images */ = {
@@ -221,6 +234,7 @@
 				1831F8311B408246000937C6 /* Resources */,
 				ECF98F459AC9251240250D58 /* Copy Pods Resources */,
 				189562361B41BDA7007DEC4D /* ShellScript */,
+				BA5826FEEB3A8D2BF8F27000 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -342,6 +356,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		BA5826FEEB3A8D2BF8F27000 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		ECF98F459AC9251240250D58 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -367,6 +396,7 @@
 				189562351B4094A7007DEC4D /* BudsieViewController.m in Sources */,
 				189562321B408837007DEC4D /* SelectImageViewController.m in Sources */,
 				1831F85F1B408528000937C6 /* ImageCell.m in Sources */,
+				18057E441C5A43B800E8BB00 /* NSHTTPCookieStorage+Additional.m in Sources */,
 				1831F83C1B408246000937C6 /* AppDelegate.m in Sources */,
 				1831F8391B408246000937C6 /* main.m in Sources */,
 				C87BFF27CB9F7EC37BC9B399 /* BudsieOrderData.m in Sources */,
@@ -505,7 +535,7 @@
 				INFOPLIST_FILE = BudsiesDemoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e47a5396-119a-4e9c-ac58-03b06aba0555";
+				PROVISIONING_PROFILE = "1b46c2f4-3e63-477b-92f5-8566f7f2956e";
 			};
 			name = Debug;
 		};
@@ -523,7 +553,7 @@
 				INFOPLIST_FILE = BudsiesDemoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "2ccac81a-a6ee-48a4-9043-609589986397";
+				PROVISIONING_PROFILE = "391ed4ca-d1dc-4be5-b468-853f57d3aab1";
 			};
 			name = Release;
 		};

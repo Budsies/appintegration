@@ -38,7 +38,7 @@
     if (!self.image) {
         return nil;
     }
-    return [@"data:image/png;base64," stringByAppendingString:[UIImagePNGRepresentation(self.image) base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed]];;
+    return [@"data:image/png;base64," stringByAppendingString:[UIImagePNGRepresentation(self.image) base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed]];
 }
 
 @end

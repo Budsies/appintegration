@@ -121,7 +121,7 @@
 
 #pragma mark - SelectImageViewControllerDelegate
 
-- (void)viewConroller:(SelectImageViewController *)controller selectedImage:(UIImage *)image {
+- (void)viewController:(SelectImageViewController *)controller selectedImage:(UIImage *)image {
     // the method of SelectImageViewControllerDelegate that set image from the app
     BudsieOrderData *orderData = [BudsieOrderData orderWithImage:image];
     NSString *javascript = [NSString stringWithFormat:@"app.views.mobileIntegrationAPI.setArtwork('%@', '%@')", [orderData encodeImageToBase64], orderData.filename];
@@ -130,5 +130,14 @@
 
     [controller dismissViewControllerAnimated:YES completion:nil];
 }
+
+- (void)viewControllerCancelSelectImage:(SelectImageViewController *)controller {
+    NSString *javascript = [NSString stringWithFormat:@"app.views.mobileIntegrationAPI.hideProgressor()"];
+
+    [self.webView stringByEvaluatingJavaScriptFromString:javascript];
+
+    [controller dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 @end

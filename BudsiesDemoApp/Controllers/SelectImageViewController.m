@@ -63,8 +63,8 @@ static NSString *const ReuseIdentifier = @"ImageCell";
 
 - (void)rightBarItemTap {
     if (self.delegate) {
-        if ([self.delegate respondsToSelector:@selector(viewConroller: selectedImage:)]) {
-            [self.delegate viewConroller:self selectedImage:self.images[self.selectedIndexPath.item]];
+        if ([self.delegate respondsToSelector:@selector(viewController:selectedImage:)]) {
+            [self.delegate viewController:self selectedImage:self.images[self.selectedIndexPath.item]];
         }
     } else {
         [self performSegueWithIdentifier:@"GetBudsie" sender:self];
@@ -72,7 +72,11 @@ static NSString *const ReuseIdentifier = @"ImageCell";
 }
 
 - (void)leftBarItemTap {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    if ([self.delegate respondsToSelector:@selector(viewControllerCancelSelectImage:)]) {
+        [self.delegate viewControllerCancelSelectImage:self];
+    } else {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
 }
 
 #pragma mark - Navigation

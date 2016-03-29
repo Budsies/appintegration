@@ -13,7 +13,8 @@
 @protocol SelectImageViewControllerDelegate <NSObject>
 
 @optional
-- (void)viewConroller:(SelectImageViewController *)controller selectedImage:(UIImage *)image;
+- (void)viewController:(SelectImageViewController *)controller selectedImage:(UIImage *)image;
+- (void)viewControllerCancelSelectImage:(SelectImageViewController *)controller;
 
 @end
 

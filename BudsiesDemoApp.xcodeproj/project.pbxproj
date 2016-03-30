@@ -339,7 +339,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./Pods/Fabric/Fabric.framework/run 42fe9e55667b26c69d3914a22fda1df848730d15 6a8d21c85d7c44f6b226a90ac421e3ae1fea197fda27c24eb4cce2f0ba0e14cf";
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 42fe9e55667b26c69d3914a22fda1df848730d15 6a8d21c85d7c44f6b226a90ac421e3ae1fea197fda27c24eb4cce2f0ba0e14cf";
 		};
 		9025D456183BA0B3FA5199F9 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -535,7 +535,7 @@
 				INFOPLIST_FILE = BudsiesDemoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1b46c2f4-3e63-477b-92f5-8566f7f2956e";
+				PROVISIONING_PROFILE = "771849ac-8817-4ac2-b7f6-27ece573c415";
 			};
 			name = Debug;
 		};
@@ -553,7 +553,7 @@
 				INFOPLIST_FILE = BudsiesDemoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "391ed4ca-d1dc-4be5-b468-853f57d3aab1";
+				PROVISIONING_PROFILE = "88bf5615-7931-4c52-8079-890f9aaddf79";
 			};
 			name = Release;
 		};
